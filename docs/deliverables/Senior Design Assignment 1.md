@@ -1,4 +1,6 @@
-# Team Roles &amp; Responsibilities
+# Assignment 1: Project Initiation Foundations
+
+## Team Roles &amp; Responsibilities
 
 Formal organization of team members, assigned leadership/technical roles, and defined individual domain ownership.
 
