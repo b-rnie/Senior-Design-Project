@@ -1,6 +1,8 @@
-# Hierarchical top-down system decomposition
+# Top-Down Requirements & Specifications
 
-## Domains (Category)
+## Hierarchical top-down system decomposition
+
+### Domains (Category)
 
 - **Identity &amp; Access** **(AUTH)****:** Responsible for secure authentication, authorization, and session management for both B2B shelter accounts and B2C user profiles.
 
@@ -14,59 +16,24 @@
 
 - **Recommendation Engine** **(ALGO)****:** Responsible for tracking interaction telemetry such as watch times and interests and algorithmically curating the feed queue to align with user preferences.
 
-- **Core Infrastructure &amp; Streaming** **(INFRA)****:** Responsible for ensuring video streaming efficiency, content delivery network routing, and overall system performance and security.
+- **Core Infrastructure amp; Streaming** **(INFRA)****:** Responsible for ensuring video streaming efficiency, content delivery network routing, and overall system performance and security.
 
-| **Key** **[Type]-[Category]-[Number]** | **Domain** | **User Story &amp; Speci****fication** | **MVP Scope** | **Verification Method** |
+| **Key** **[Type]-[Category]-[Number]** | **Domain** | **User Story &amp; Specification | **MVP Scope** | **Verification Method** |
 | --- | --- | --- | --- | --- |
-| FR-AUTH-01 | Identity &amp; Access | Story: As a shelter staff member, I want to securely log in so that I can access the B2B intake dashboard.<br><br>Specification: Enforce firebase authentication with standard email/password validation and secure token generation.<br><br>**Acceptance Criteria:**<br><br>**Given** an unregistered email is entered,<br><br>**When** the user submits the login form,<br><br>**Then** the system rejects access and displays an "Invalid Credentials" error message. | Must-Have | Unit Test + Input Inspection |
-| 
-
-<!-- Page break -->
-<div style="page-break-after: always;"></div>
-
-FR-AUTH-02 | Identity &amp; Access | Story: As a new user, I want to create an account so that I can use PetLoop features.<br><br>Specifications: The system allows users to create a unique account using an email and password with an email not yet registered.<br><br>Acceptance Criteria:<br><br>Given: a new user enters valid account, information,<br><br>When: the registration form is submitted<br><br>Then: the system creates the user’s account. | Must-Have | Unit Test + UI inspection |
-| FR-AUTH-03 | Identity &amp; Access | Story: As an existing user, I want to be able to change my password so that I can recover my account if I forget my password.<br><br>**Specifications:** System allows users to reset their password via email or phone number that is registered upon initial account creation.<br><br>**Acceptance Criteria:**<br><br>**Given:** An existing user forgets their password,<br><br>**When:** the user clicks on "Forgot Password"<br><br>**Then:** The system provides a recovery process to create a new password for the user. | Must-Have | Unit Test + UI inspection |
+| FR-AUTH-01 | Identity & Access | Story: As a shelter staff member, I want to securely log in so that I can access the B2B intake dashboard.<br><br>Specification: Enforce firebase authentication with standard email/password validation and secure token generation.<br><br>**Acceptance Criteria:**<br><br>**Given** an unregistered email is entered,<br><br>**When** the user submits the login form,<br><br>**Then** the system rejects access and displays an "Invalid Credentials" error message. | Must-Have | Unit Test + Input Inspection |
+| FR-AUTH-02 | Identity amp; Access | Story: As a new user, I want to create an account so that I can use PetLoop features.<br><br>Specifications: The system allows users to create a unique account using an email and password with an email not yet registered.<br><br>Acceptance Criteria:<br><br>Given: a new user enters valid account, information,<br><br>When: the registration form is submitted<br><br>Then: the system creates the user’s account. | Must-Have | Unit Test + UI inspection |
+| FR-AUTH-03 | Identity amp; Access | Story: As an existing user, I want to be able to change my password so that I can recover my account if I forget my password.<br><br>**Specifications:** System allows users to reset their password via email or phone number that is registered upon initial account creation.<br><br>**Acceptance Criteria:**<br><br>**Given:** An existing user forgets their password,<br><br>**When:** the user clicks on "Forgot Password"<br><br>**Then:** The system provides a recovery process to create a new password for the user. | Must-Have | Unit Test + UI inspection |
 | FR-AI-01 | AI Processing Pipeline | Story: As a shelter staff member, I want the system to extract traits from my uploaded video so that I bypass manual data entry.<br><br>Specification: Pass video payloads to the Gemini API to extract a minimum of 3 text-based behavioral tags.<br><br>Acceptance Criteria:<br><br>Given a processed video payload,<br><br>When the Gemini API returns a successful 200 OK response,<br><br>Then the UI populates with at least 3 editable text tags. | Must-Have | Unit Test + Input Inspection |
-| FR-AI-02 | AI Processing Pipeline | Story:<br><br>As an admin, I want to ensure that uploaded videos are pet related, safe, and do not include any inappropriate imagery or malicious software so that questionable videos are flagged before being available to users.<br><br>**Specification:**<br><br>The video shall be inspected by Gemini API to determine whether the video is pet-related and obeys the safety requirements. If they do not qualify, they are flagged for review.<br><br>**Acceptance Criteria:**<br><br>Given a video has been uploaded to the platform<br><br>When the video is processed through the AI review<br><br>Then Gemini API shall determine whether the video is pet-related and safe or contains harmful or malicious imagery<br><br>
-
-<!-- Page break -->
-<div style="page-break-after: always;"></div>
-
-And allow it to pass into the database or hold it for further review. | 
-
-<!-- Page break -->
-<div style="page-break-after: always;"></div>
-
-Should-Have | Input Inspection |
+| FR-AI-02 | AI Processing Pipeline | Story:<br><br>As an admin, I want to ensure that uploaded videos are pet related, safe, and do not include any inappropriate imagery or malicious software so that questionable videos are flagged before being available to users.<br><br>**Specification:**<br><br>The video shall be inspected by Gemini API to determine whether the video is pet-related and obeys the safety requirements. If they do not qualify, they are flagged for review.<br><br>**Acceptance Criteria:**<br><br>Given a video has been uploaded to the platform<br><br>When the video is processed through the AI review<br><br>Then Gemini API shall determine whether the video is pet-related and safe or contains harmful or malicious imagery<br><br>And allow it to pass into the database or hold it for further review. | Should-Have | Input Inspection |
 | FR-AI-03 | AI Processing Pipeline | Story: As a user, I want to learn more details about the pet breed/species so that I can better understand if the pet disposition is suitable.<br><br>**Specification:** A button/utility should appear on videos that allow users to ask questions to a chat bot to allow users to learn more about the animal.<br><br>**Acceptance Criteria:**<br><br>**Given:** A user wants to learn more about a breed or animal<br><br>**Then:** The system provides an AI chatbot that takes natural language input and provides detailed output. | Should-Have | Unit Test + Input Inspection |
 | FR-FEED-01 | Discovery Feed | Story: As a prospective adopter, I want to view a vertical feed of pet videos so that I can quickly experience their personalities.<br><br>Specification: The frontend renders a full-screen vertical view that triggers autoplay upon rendering.<br><br>Acceptance Criteria:<br><br>Given the user is actively viewing the feed,<br><br>When a vertical swipe gesture is executed,<br><br>Then the current video unloads<br><br>And the next video in the array auto plays immediately. | Must-Have | Unit Test + UI Inspection |
 | FR-FEED-02 | Discovery Feed | **Story:**<br><br>As a prospective adopter, I want to view a pet's profile so that I can learn more about the pet.<br><br>**Specification:**<br><br>The system displays the selected pet's profile with its available information.<br><br>**Acceptance Criteria:**<br><br>**Given** a user is viewing a pet in the feed,<br><br>**When t**he user opens the pet's profile,<br><br>**Then** the system displays the pet's information. | Must-Have | UI Inspection |
 | FR-FEED-03 | Discovery Feed | **Story:** As an admin, I want to make sure that the UI is compatible with a majority of mobile devices so that users can use the app on a variety of different devices.<br><br>**Specification:** The screen should be responsive and fill the entire span of the mobile device's screen.<br><br>**Acceptance Criteria:**<br><br>**Given:** A user has multiple devices such as a tablet and phone<br><br>**When:** The user opens the app<br><br>**Then:** The system automatically detects what size to display the app. | Should-Have | UI Inspection |
-| FR-INTERACT-01 | User Interaction | Story: As a prospective adopter, I want to swipe right on a video so that I can save the animal to my favorites list.<br><br>
-
-<!-- Page break -->
-<div style="page-break-after: always;"></div>
-
-Specification: A right-swipe triggers a POST request to save the pet to the user's relational database table.<br><br>Acceptance Criteria:<br><br>Given an authenticated user swipes right on a profile,<br><br>When the client-side gesture completes,<br><br>Then the backend writes the pet to the saved pets table and returns a 201 Created status. | 
-
-<!-- Page break -->
-<div style="page-break-after: always;"></div>
-
-Must-Have | Unit Test + UI Inspection |
-| 
-
-<!-- Page break -->
-<div style="page-break-after: always;"></div>
-
-FR-INTERACT-02 | User Interaction | Story: As a prospective adopter, I want to view my saved pets so that I can return to pets I am interested in.<br><br>Specification:<br><br>The system displays pets that the user has previously saved.<br><br>Acceptance Criteria:<br><br>Given a user has saved at least one pet,<br><br>When the user opens their saved pets,<br><br>Then the system displays the saved pet(s). | Must-Have | Unit Test + UI Inspection |
+| FR-INTERACT-01 | User Interaction | Story: As a prospective adopter, I want to swipe right on a video so that I can save the animal to my favorites list.<br><br> Specification: A right-swipe triggers a POST request to save the pet to the user's relational database table.<br><br>Acceptance Criteria:<br><br>Given an authenticated user swipes right on a profile,<br><br>When the client-side gesture completes,<br><br>Then the backend writes the pet to the saved pets table and returns a 201 Created status. | Must-Have | Unit Test + UI Inspection |
+| FR-INTERACT-02 | User Interaction | Story: As a prospective adopter, I want to view my saved pets so that I can return to pets I am interested in.<br><br>Specification:<br><br>The system displays pets that the user has previously saved.<br><br>Acceptance Criteria:<br><br>Given a user has saved at least one pet,<br><br>When the user opens their saved pets,<br><br>Then the system displays the saved pet(s). | Must-Have | Unit Test + UI Inspection |
 | FR-INTERACT-03 | User Interaction | Story:<br><br>As an adopter, I want to report posts that I feel are misleading or contain information that does not accurately represent the pet.<br><br>**Specification:**<br><br>Users can press a report button which opens a fillable prompt that logs the gathered information and sends it to moderators/administrators as a log.<br><br>**Acceptance Criteria:**<br>Given user views a post containing misinformation<br><br>When user scrolls through posts<br><br>Then user clicks the report button and fills necessary info<br><br>And the report log is sent to administrators. | Should-Have | Unit Test + UI Inspection |
 | FR-INTERACT-04 | User Interaction | Story:<br><br>As an adopter, I want to view a specific pet’s adoption shelter contact information so that I can contact them for more information.<br><br>**Specification:**<br><br>Pet profile should contain contact information responsible for the pet, which includes the shelter’s name, number, email and physical address<br><br>**Acceptance Criteria:**<br><br>Given an adopter is viewing a pet’s post<br><br>When the user clicks on the pet profile<br><br>Then the shelter’s contact information should be displayed and available. | Must-Have | Unit Test + UI Inspection |
-| 
-
-<!-- Page break -->
-<div style="page-break-after: always;"></div>
-
-NFR-INTERACT-05 | User Interaction | Story: As an Admin, I want to be able to review content before it is posted from my organization.<br><br>Specifications:  A upload post triggers an alert to admin to review content being posted via notification.<br><br>Acceptance Criteria:<br><br>Given a staff member has uploaded a video.<br><br>When the Admin opens the app they receive a notification reminder on their app.<br><br>Then the system displays a notification to approve the following videos in queue. | Nice-to-Have | Unit Test + UI Inspection |
+| NFR-INTERACT-05 | User Interaction | Story: As an Admin, I want to be able to review content before it is posted from my organization.<br><br>Specifications:  A upload post triggers an alert to admin to review content being posted via notification.<br><br>Acceptance Criteria:<br><br>Given a staff member has uploaded a video.<br><br>When the Admin opens the app they receive a notification reminder on their app.<br><br>Then the system displays a notification to approve the following videos in queue. | Nice-to-Have | Unit Test + UI Inspection |
 | NFR-INFRA-01 | Core Infrastructure &amp; Streaming | Story: As an administrator, I want videos served efficiently so that mobile users do not experience buffering.<br><br>Specification: Video content must be served via a Content Delivery Network ensuring optimal mobile latency.<br><br>Acceptance Criteria:<br><br>Given a standard mobile connection,<br><br>When a video is requested from the feed,<br><br>Then response time measures under 600 milliseconds. | Should-Have | Load &amp; Benchmark Testing |
 | NFR-INFRA-02 | Core Infrastructure &amp; Streaming | Story: As an admin, I want to make sure the database is accurate so that potential adopters can be sure of which pets are available or unavailable.<br><br>**Specification:** Integrate a live synchronous database that tracks availability of pets<br><br>**Acceptance Criteria:**<br><br>**Given:** A prospective adopter wants to see if a pet is available to adopt, foster, or already adopted<br><br>**When:** The user checks the status<br><br>**Then:** The database updates every minute to check if the pet is available and displays status. | Must-have | Unit Test + UI Inspection |
 | NFR-INFRA-03 | Core Infrastructure &amp; Streaming | Story:<br><br>As an admin, I want to ensure that user data is safe and protected from being compromised, modified, or accessed without their approval, so that user information remains secure and private.<br><br>**Specification:**<br>The system shall protect user data from being mishandled using user authentication, encryption, and safeguarded data handling.<br><br>**Acceptance Criteria:**<br>Given user data is securely stored within the system<br><br>When an unauthorized user attempts to access the data<br><br>Then access to the data is denied<br><br>And the system logs the attempt. | Must-Have | Security Audit + Inspection |
