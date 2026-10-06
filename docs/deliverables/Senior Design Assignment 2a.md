@@ -1,15 +1,5 @@
 # Assignment 2a: User Research, Personas & Ethical Audit
 
-X, X, X, X
-
-School of Computing, Computer Science, Wichita State University
-
-CS-598-14146 Senior Design Project 1
-
-X
-
-October 3, 2026
-
 ## Customer personas & empathy maps
 
 <!-- Page break -->
