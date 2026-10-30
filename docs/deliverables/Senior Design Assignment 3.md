@@ -1,17 +1,3 @@
-1 
-
-**Assignment 3: Architectural Blueprint & Operational Plan** 
-
-Renee Amaya, Jennifer Le, Benny Pham, Miranda Salazar School of Computing, Computer Science, Wichita State University 
-
-CS-598-14146 Senior Design Project 1 
-
-Cody Farlow 
-
-October 25, 2026 
-
-2 
-
 # **HIGH-LEVEL SYSTEM DIAGRAM** 
 
 <u>Schematic Diagram</u> 
