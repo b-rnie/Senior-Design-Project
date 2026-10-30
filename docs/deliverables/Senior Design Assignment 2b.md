@@ -1,3 +1,5 @@
+# Assignment 3: Architectural Blueprint & Operational Plan
+
 # Top-Down Requirements & Specifications
 
 ## Hierarchical top-down system decomposition
