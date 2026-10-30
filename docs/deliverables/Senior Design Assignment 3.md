@@ -1,3 +1,5 @@
+# Assignment 3: Architectural Blueprint & Operational Plan
+
 # **HIGH-LEVEL SYSTEM DIAGRAM** 
 
 Schematic Design: \
