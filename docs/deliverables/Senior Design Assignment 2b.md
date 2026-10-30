@@ -1,4 +1,4 @@
-# Assignment 3: Architectural Blueprint & Operational Plan
+# Assignment 2b: Top-Down Requirements & Specifications
 
 # Top-Down Requirements & Specifications
 
