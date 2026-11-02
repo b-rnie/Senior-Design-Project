@@ -1,7 +1,8 @@
+## AI Usage Log
+
 | Date | Team Member | Tool & Version | Prompt / Query Summary | Output Received & Intended Use | Human Verification & Modifications Made |
-| ---- | ----------- | -------------- | ---------------------- | ------------------------------ | --------------------------------------- |
-**DATE** | MEM | TOOL | PROMPT | OUTPUT | HUMAN
-**DATE** | MEM | TOOL | PROMPT | OUTPUT | HUMAN
-**DATE** | MEM | TOOL | PROMPT | OUTPUT | HUMAN
-**DATE** | MEM | TOOL | PROMPT | OUTPUT | HUMAN
-**DATE** | MEM | TOOL | PROMPT | OUTPUT | HUMAN
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-09-13 | Renee Amaya | Gemini 3.5 Flash Lite | Brainstorm ROI options focused on the B2B shelter side, specifically ways to reduce manual intake overhead and administrative costs. | **1. Labor-Hour Recapture (Direct Administrative Savings)**<br>- **The Problem:** Manually typing out creative, engaging biographies and filling out multi-page characteristic forms for every single animal takes roughly 15 to 20 minutes per pet.<br>- **The Pet Loop ROI:** By replacing manual data entry with a 30-second video upload, the AI instantly handles the tagging and bio generation. This recaptures hundreds of administrative hours per month. Shelters can reallocate this saved staff time toward actual animal care, medical intake, or facility maintenance without increasing their payroll budget.<br><br>**2. Decreased "Length of Stay" (Holding Costs)**<br>- **The Problem:** Every day an animal sits in a shelter costs the organization money (food, space, electricity, medical care, and staffing). When intake is backed up due to manual data entry, animals sit hidden in the back without a public profile, increasing their Length of Stay (LoS).<br>- **The Pet Loop ROI:** AI video intake gets a pet's profile live on the platform almost immediately upon arrival. Getting animals in front of adopters days or weeks faster accelerates the adoption timeline, directly saving the shelter the hard daily costs of housing that animal. | Evaluated options and decided that ROI is best found in administrative labor saving of staff for this specific platform compared to other options. |
+| 2026-09-13 | Miranda Salazar | ChatGPT | Brainstormed color palettes, branding ideas, and initial UI/UX concepts for Pet Loop | Provided color palette suggestions, branding recommendations, and visual layout ideas to use as inspiration for the Pet Loop brand kit. | Used the AI-generated ideas as references and then used Canva to build the actual Pet Loop branding and app screen designs. Colors, layouts, logo elements, and other design choices were reviewed and adjusted to fit the project. |
+
+
