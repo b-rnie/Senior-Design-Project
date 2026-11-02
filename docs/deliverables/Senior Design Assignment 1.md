@@ -4,13 +4,13 @@
 
 Formal organization of team members, assigned leadership/technical roles, and defined individual domain ownership.
 
-- Renée Amaya, Z883J756, Team Lead, Cloud-Video Infrastructure
+- Renée Amaya, Team Lead, Cloud-Video Infrastructure
 
-- Miranda Salazar, v968q437, Front-End, QA
+- Miranda Salazar, Front-End, QA
 
-- Jennifer Le, M722u854, Database &amp; Algorithms
+- Jennifer Le, Database &amp; Algorithms
 
-- Benny Pham, Z896H885, Documentation, Backend
+- Benny Pham, Documentation, Backend
 
 ## Project Brand Kit &amp; Identity Guidelines
 
